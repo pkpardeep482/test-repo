@@ -2,6 +2,7 @@ package com.pardeep.foxy_sdk;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -127,4 +128,11 @@ public class FoxySdk
         });
     }
 
+
+
+    private void navigateToModuleActivity(Context context){
+        Intent intent = new Intent();
+        intent.setClassName("com.pardeep.foxy_sdk", "com.pardeep.foxydynamicmodule.ModuleMainActivity");
+        context.startActivity(intent);
+    }
 }

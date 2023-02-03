@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VI-SampleApp</string>
+    <string name="title_dynamicbundle">DynamicBundle</string>
+    <string name="title_foxydynamiccode">FoxyDynamicModile</string>
 </resources>
