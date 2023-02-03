@@ -47,26 +47,27 @@ public class FoxySdk
 
     public void getAppBundle(Context context){
         SplitInstallRequest request = SplitInstallRequest.newBuilder()
-                .addModule("dynamicfeature")
+                .addModule("foxydynamiccode")
                 .build();
 
 
         splitInstallManager.startInstall(request).addOnCompleteListener(new OnCompleteListener<Integer>() {
             @Override
             public void onComplete(@NonNull Task<Integer> task) {
-
+                Toast.makeText(context, "OnCompleted", Toast.LENGTH_SHORT).show();
                 Log.e("onComplete", "Completed = "+task.isComplete() + ", Success = "+task.isSuccessful());
             }
         }).addOnSuccessListener(new OnSuccessListener<Integer>() {
             @Override
             public void onSuccess(Integer integer) {
+                Toast.makeText(context, "OnSuccess", Toast.LENGTH_SHORT).show();
 
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(Exception e) {
 
-
+                Toast.makeText(context, "onFailure "+e, Toast.LENGTH_SHORT).show();
             }
         });
 
