@@ -33,7 +33,7 @@ public class FoxySdk
 
 
     private void isDynamicModuleAlreadyInstalled(Context context) {
-        boolean isModuleAlreadyInstalled = splitInstallManager.getInstalledModules().contains("dynamicfeature");
+        boolean isModuleAlreadyInstalled = splitInstallManager.getInstalledModules().contains("foxydynamiccode");
         if(!isModuleAlreadyInstalled) {
             progressDialog = new ProgressDialog(context);
             progressDialog.setTitle("Downloading host app dynamically");
