@@ -16,3 +16,4 @@ rootProject.name = "VI-SampleApp"
 include ':app'
 include ':foxy-sdk'
 include ':foxy-sdk:foxydynamiccode'
+include ':app:dogs'
